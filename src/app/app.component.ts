@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild,  ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { VERSION } from '@angular/material';
 import { BottomSheet } from './bottomsheet/bottom-sheet';
 import { MatBottomSheet } from '@angular/material';
@@ -10,7 +10,6 @@ import { MatBottomSheet } from '@angular/material';
 })
 
 export class AppComponent implements OnInit {
-   @ViewChild('morevert') morevert:ElementRef;
   constructor(private bottomSheet: MatBottomSheet, ) {
 
   }
@@ -38,11 +37,9 @@ export class AppComponent implements OnInit {
     for (let i = 1; i <= 10; i++) {
       this.data.push(this.getRandomData());
     }
-    console.log(JSON.stringify(this.data))
   }
 
   showBottomSheet(): void {
     this.bottomSheet.open(BottomSheet);
-     this.morevert.nativeElement.focus();
   }
 } 
