@@ -8,6 +8,7 @@ import {MatBottomSheet, MatBottomSheetRef} from '@angular/material';
 export class BottomSheet {
   constructor(private bottomSheetRef: MatBottomSheetRef<BottomSheet>) {}
 
+// this is the placeholder for actual functionality
   openLink(event: MouseEvent): void {
     this.bottomSheetRef.dismiss();
     event.preventDefault();
