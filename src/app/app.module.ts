@@ -3,7 +3,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BottomSheet} from './bottomsheet/bottom-sheet';
-import {ScrollDispatchModule} from '@angular/cdk/scrolling';
 import {
   MatBottomSheetModule,
   MatButtonModule,

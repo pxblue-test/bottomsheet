@@ -1,8 +1,4 @@
 @import '~@pxblue/themes/angular/theme.scss';
-
-$custom-typography: mat-typography-config($font-family: 'OpenSans, Arial, Helvetica, sans-serif;');
-@include mat-core($custom-typography);
-
 body { 
   margin: 0;
 }
