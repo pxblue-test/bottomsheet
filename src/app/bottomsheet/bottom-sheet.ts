@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import {MatBottomSheet, MatBottomSheetRef} from '@angular/material';
 @Component({
   selector: 'bottom-sheet',
   templateUrl: './bottom-sheet.html',
-  styleUrls: [],
+  styleUrls: ['./bottom-sheet.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class BottomSheet {
   constructor(private bottomSheetRef: MatBottomSheetRef<BottomSheet>) {}

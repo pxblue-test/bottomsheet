@@ -22,6 +22,6 @@ export class AppComponent implements OnInit {
   }
 
   showBottomSheet(): void {
-    this.bottomSheet.open(BottomSheet);
+    this.bottomSheet.open(BottomSheet, {restoreFocus: false, panelClass: 'bottomPanel'});
   }
 } 
