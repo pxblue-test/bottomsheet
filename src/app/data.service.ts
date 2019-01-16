@@ -26,6 +26,7 @@ export class DataService {
     for (let i = 1; i <= 10; i++) {
       this.data.push(this.getRandomData());
     }
+    this.data.sort((a,b) => b.date-a.date);
   }
 
 }
