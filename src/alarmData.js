@@ -9,7 +9,7 @@ export function formatDate(timestamp){
 }
 
 function getRandomData(){
-  const date = Math.round(NOW - Math.random()*1000000);
+  // const date = Math.round(NOW - Math.random()*1000000);
   
   return {
     date: Math.round(NOW - Math.random()*1000000000),
