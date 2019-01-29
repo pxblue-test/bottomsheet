@@ -1,6 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {NgModule} from '@angular/core';
+import {NgModule,  CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BottomSheet} from './bottomsheet/bottom-sheet';
 import {
@@ -21,6 +21,7 @@ import { DataService } from './data.service';
     MatListModule,
     MatToolbarModule,
     MatBottomSheetModule,
+    MaterialModule
   ]
 })
 export class MaterialModule {}
@@ -31,7 +32,8 @@ export class MaterialModule {}
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
     entryComponents: [BottomSheet],
   declarations: [AppComponent,BottomSheet ],
