@@ -21,7 +21,7 @@ import { DataService } from './data.service';
     MatListModule,
     MatToolbarModule,
     MatBottomSheetModule,
-    MaterialModule
+  
   ]
 })
 export class MaterialModule {}
@@ -33,7 +33,7 @@ export class MaterialModule {}
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MaterialModule
+ 
   ],
     entryComponents: [BottomSheet],
   declarations: [AppComponent,BottomSheet ],
