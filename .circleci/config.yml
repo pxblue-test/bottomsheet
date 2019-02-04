@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/multiselect-list
+    working_directory: ~/bottomsheet
     docker:
       - image: circleci/node:8.11-browsers
     steps:
