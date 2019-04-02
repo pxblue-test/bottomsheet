@@ -1,18 +1,23 @@
 import React from 'react';
 
-import {
-  AppBar,
-  Avatar,
-  Drawer,
-  IconButton,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  Toolbar,
-  Typography 
-}from '@material-ui/core';
-import {Close, Done, GetApp, Menu, MoreVert, Notifications, NotificationsActive} from '@material-ui/icons';
+import AppBar from '@material-ui/core/AppBar';
+import Avatar from '@material-ui/core/Avatar';
+import Drawer from '@material-ui/core/Drawer';
+import IconButton from '@material-ui/core/IconButton';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+
+import Close from '@material-ui/icons/Close';
+import Done from '@material-ui/icons/Done';
+import GetApp from '@material-ui/icons/GetApp';
+import Menu from '@material-ui/icons/Menu';
+import MoreVert from '@material-ui/icons/MoreVert';
+import Notifications from '@material-ui/icons/Notifications';
+import NotificationsActive from '@material-ui/icons/NotificationsActive';
 
 import { withStyles } from '@material-ui/core/styles';
 import * as PXBColors from '@pxblue/colors';
