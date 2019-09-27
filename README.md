@@ -1,5 +1,5 @@
 # Bottomsheet Example
-This project demonstrates how to create a basic bottomsheet with global actions for the entire page.
+This project demonstrates how to build a basic bottomsheet. At the top of the page, the app bar has a 3dot icon on right. When clicking on 3dot icon bottomsheet slides up from bottom of the page, revealing global actions that affect the whole page.
 
 | Framework           | Status       | Live Examples  |
 | ---------------- |--------------|------------------|
