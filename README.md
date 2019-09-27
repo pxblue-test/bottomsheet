@@ -1,5 +1,5 @@
 # Bottomsheet Example
-This project demonstrates how to build a basic bottomsheet with global page actions.
+This project demonstrates how to build a basic bottomsheet
 
 | Framework           | Status       | Live Examples  |
 | ---------------- |--------------|------------------|
