@@ -1,0 +1,7 @@
+{
+  "name": "pxblue-bottomsheet-ionic",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
