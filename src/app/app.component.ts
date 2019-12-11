@@ -15,7 +15,6 @@ import { BottomsheetComponent } from './bottomsheet/bottomsheet.component';
 export class AppComponent {
 
   data = [];
-  toggleNotification = false;
   Colors: Object = Colors;
 
   constructor(
@@ -24,7 +23,6 @@ export class AppComponent {
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private dataService: DataService
-
   ) {
     this.initializeApp();
   }
