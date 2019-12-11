@@ -1,10 +1,5 @@
 @import "~@pxblue/colors/palette.scss";
 
-ion-header {
-  position: fixed;
-  top: 0;
-  z-index: 11;
-}
 .header-content{
   padding-left: 16px;
   padding-right: 16px;
@@ -12,6 +7,10 @@ ion-header {
 .menu-icon {
   margin-right: 32px;
   height: 24px;
+}
+
+.mat-list-base .mat-list-item .mat-list-icon.padded-list-icon {
+  padding: 8px;
 }
 
 .title-wrapper {
@@ -25,49 +24,8 @@ ion-header {
   }
 }
 
-.data-list {
-  padding: 0;
-  margin-top: calc(56px);
-  margin-top: calc(56px + constant(safe-area-inset-top));
-  margin-top: calc(56px + env(safe-area-inset-top));
-  [mat-list-item]{
-    color: map-get($pxb-black, 800);
-  }
-  [mat-list-avatar]{
-    line-height: 40px;
-    color: map-get($pxb-gray, 400);
-  }
-}
-
-.alarm{
-  border-left: 4px solid;
-  border-left-color: #ff3333;
-}
-.alarm .mat-icon{
-  padding-left: 0px;
-}
-
-.bottom-panal {
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  right: 0;
-  transition: height 250ms ease-in-out;
-  background: #fff;
-  box-shadow: 0px -2px 10px 0px #000;
-}
-
 .mat-list-base {
   padding-top: 0;
-}
-
-.height-0 {
-  height: 0;
-  box-shadow: none;
-}
-
-.panal-margin-bottom {
-  margin-bottom: 180px;
 }
 
 mat-list-item {
@@ -75,13 +33,13 @@ mat-list-item {
   box-sizing: border-box;
   cursor: pointer;
   &.active{
-    border-left-color: #ff3333;
+    border-left-color: map-get($pxb-red, A700);
     h4{
-      color: #ff3333;
+      color: map-get($pxb-red, A700);
     }
     mat-icon{
       color: #ffffff;
-      background: #ff3333;
+      background: map-get($pxb-red, A700);
     }
   }
 }

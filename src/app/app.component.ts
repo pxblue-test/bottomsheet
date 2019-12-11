@@ -4,6 +4,8 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { DataService } from './data.service';
 import * as Colors from '@pxblue/colors';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import { BottomsheetComponent } from './bottomsheet/bottomsheet.component';
 
 @Component({
   selector: 'app-root',
@@ -12,11 +14,12 @@ import * as Colors from '@pxblue/colors';
 })
 export class AppComponent {
 
-  list = [];
+  data = [];
   toggleNotification = false;
   Colors: Object = Colors;
 
   constructor(
+    private bottomSheet: MatBottomSheet,
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
@@ -27,7 +30,7 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this.list = this.dataService.data;
+    this.data = this.dataService.data;
   }
 
   initializeApp() {
@@ -36,10 +39,7 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
-  openNotification() {
-    this.toggleNotification = true;
-  }
-  closeNotification() {
-    this.toggleNotification = false;
+  showBottomSheet(): void {
+    this.bottomSheet.open(BottomsheetComponent, {restoreFocus: false, panelClass: 'bottomPanel'});
   }
 }
