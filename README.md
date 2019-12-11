@@ -6,7 +6,7 @@ This project demonstrates how to build a basic bottomsheet. At the top of the pa
 | Angular | [![CircleCI](https://circleci.com/gh/pxblue/bottomsheet/tree/angular.svg?style=shield)](https://circleci.com/gh/pxblue/bottomsheet/tree/angular) | [View on Stackblitz](https://stackblitz.com/github/pxblue/bottomsheet/tree/angular)
 | React | [![CircleCI](https://circleci.com/gh/pxblue/bottomsheet/tree/react.svg?style=shield)](https://circleci.com/gh/pxblue/bottomsheet/tree/react) | [View on Code Sandbox](https://codesandbox.io/s/github/pxblue/bottomsheet/tree/react)
 | Ionic | [![CircleCI](https://circleci.com/gh/pxblue/bottomsheet/tree/ionic.svg?style=shield)](https://circleci.com/gh/pxblue/bottomsheet/tree/ionic) | [View on Stackblitz](https://stackblitz.com/github/pxblue/bottomsheet/tree/ionic)
-| React Native | [![CircleCI](https://circleci.com/gh/pxblue/bottomsheet/tree/reactnative.svg?style=shield)](https://circleci.com/gh/pxblue/bottomsheet/tree/reactnative) | [View on Snack](https://snack.expo.io/@git/github.com/pxblue/bottomsheet@reactnative)
+| React Native | [![CircleCI](https://circleci.com/gh/pxblue/bottomsheet/tree/reactnative.svg?style=shield)](https://circleci.com/gh/pxblue/bottomsheet/tree/reactnative) | [View on Snack](https://snack.expo.io/@git/github.com/pxblue/bottomsheet@reactnative?preview=true&platform=ios)
 
 ## Running the Example
 ### Angular
