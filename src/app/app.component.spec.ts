@@ -14,7 +14,7 @@ describe('AppComponent', () => {
 
   let statusBarSpy, splashScreenSpy, platformReadySpy, platformSpy;
 
-  let app:AppComponent;
+  let app: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
 
   beforeEach(async(() => {
@@ -41,8 +41,7 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it('should initialize the app', async () => {
-    TestBed.createComponent(AppComponent);
+  it('should initialize the app',  async() => {
     expect(platformSpy.ready).toHaveBeenCalled();
     await platformReadySpy;
     expect(statusBarSpy.styleDefault).toHaveBeenCalled();
@@ -55,15 +54,17 @@ describe('AppComponent', () => {
     const buttonElt = fixture.nativeElement.querySelector('.toolbar-button');
     buttonElt.click();
     expect(app.showBottomSheet).toHaveBeenCalled();
-    
   });
 
   it('should display the bottom sheet when clicking the top right icon', () => {
     fixture.detectChanges();
-    const buttonElt = fixture.nativeElement.querySelector('.toolbar-button');
-    buttonElt.click();
-    const bottomPanalElt = fixture.nativeElement.querySelector('.bottom-panal');
-    expect(bottomPanalElt).toBeDefined();
+    let bottomPanalElt = document.getElementById('bottom-panal');
+    expect(bottomPanalElt).toBeFalsy();
+
+    app.showBottomSheet();
+    fixture.detectChanges();
+    bottomPanalElt = document.getElementById('bottom-panal');
+    expect(bottomPanalElt).toBeTruthy();
   });
 
   // it('should call their eventHandler openLink() when clicking on the menu item', () => {
@@ -78,10 +79,29 @@ describe('AppComponent', () => {
   // });
 
   it('should cancel the bottom sheet when clicking on the overlay', () => {
-    expect(true).toBeTruthy();
+    fixture.detectChanges();
+    app.showBottomSheet();
+    let bottomPanalElt = document.getElementById('bottom-panal');
+    expect(bottomPanalElt).toBeTruthy();
+
+    // BottomSheet overlay responds to click event.
+    const overlayClass = 'cdk-overlay-backdrop';
+    const overlay = document.getElementsByClassName(overlayClass)[0] as HTMLElement;
+    overlay.click();
+    fixture.detectChanges();
+
+    // Bottom sheet needs time to be removed from screen.
+    setTimeout(() => {
+        bottomPanalElt = document.getElementById('bottom-panal');
+        expect(bottomPanalElt).toBeFalsy();
+    }, 1000);
   });
 
   it('should render menu items in the bottom sheet', () => {
-    expect(true).toBeTruthy();
+      fixture.detectChanges();
+      expect(document.getElementById('bottom-panel-item-1')).toBeFalsy();
+      app.showBottomSheet();
+      fixture.detectChanges();
+      expect(document.getElementById('bottom-panel-item-1')).toBeTruthy();
   });
 });

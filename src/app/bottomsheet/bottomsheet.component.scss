@@ -1,4 +1,4 @@
-.bottomPanel{
+#bottomPanel{
     width: 600px;
     padding: 0;
     .mat-nav-list{
@@ -6,13 +6,13 @@
     }
 }
 @media (max-width: 600px) {
-    .bottomPanel{
+    #bottomPanel{
         min-width: 100vw;
-        
+
         .mat-nav-list mat-list-item .mat-line{
             text-overflow: inherit;
             white-space: normal;
         }
     }
-    
+
 }
