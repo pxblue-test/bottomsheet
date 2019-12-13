@@ -1,21 +1,30 @@
-.alarm{
-  border-left: 4px solid;
-  border-left-color: #ff3333;
+@import "~@pxblue/colors/palette.scss";
+
+.mat-list-base .mat-list-item .mat-list-icon.padded {
+  padding: 8px;
 }
-.alarm .mat-icon{
-  padding-left: 0px;
+
+.mat-list-base {
+  padding-top: 0;
 }
-mat-list-item{
+
+.mat-list-base .mat-list-item .mat-line.list-item-title {
+  font-weight: 600; 
+  margin-bottom: 5px;
+}
+
+mat-list-item {
   border-left: 4px solid transparent;
   box-sizing: border-box;
+  cursor: pointer;
   &.active{
-    border-left-color: #ff3333;
-    h4{
-      color: #ff3333;
+    border-left-color: map-get($pxb-red, A700);
+    .list-item-title {
+      color: map-get($pxb-red, A700);
     }
     mat-icon{
       color: #ffffff;
-      background: #ff3333;
+      background: map-get($pxb-red, A700);
     }
   }
 }
