@@ -1,5 +1,5 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { TestBed, async, ComponentFixture } from '@angular/core/testing';
+import { TestBed, async, ComponentFixture, flush, tick, fakeAsync } from '@angular/core/testing';
 
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -56,52 +56,62 @@ describe('AppComponent', () => {
     expect(app.showBottomSheet).toHaveBeenCalled();
   });
 
-  it('should display the bottom sheet when clicking the top right icon', () => {
+  // TODO: this fight with the next test
+  fit('should display the bottom sheet when clicking the top right icon', fakeAsync( () => {
     fixture.detectChanges();
     let bottomPanalElt = document.getElementById('bottom-panal');
     expect(bottomPanalElt).toBeFalsy();
+    
+    const bottomSheetRef = app.showBottomSheet();
+    let aNewPromise = bottomSheetRef.afterOpened().toPromise();
+    expectAsync(aNewPromise).toBeResolved();
+    expect(bottomSheetRef).toBeTruthy();
+    bottomSheetRef.dismiss();
+    tick();
+  }));
 
+  // TODO
+  fit('should render menu items in the bottom sheet', fakeAsync(() => {
+    fixture.detectChanges();
+    tick();
+    expect(document.getElementById('bottom-panel-item-1')).toBeFalsy();
+
+    let bottomSheetRef = app.showBottomSheet();
+    fixture.detectChanges();
+    let aNewPromise = bottomSheetRef.afterOpened().toPromise();
+    expectAsync(aNewPromise).toBeResolved();
+    expect(document.getElementById('bottom-panel-item-1')).toBeTruthy();
+  }));
+
+  // TODO
+  it('should call their eventHandler openLink() when clicking on the menu item', () => {
     app.showBottomSheet();
     fixture.detectChanges();
-    bottomPanalElt = document.getElementById('bottom-panal');
-    expect(bottomPanalElt).toBeTruthy();
-  });
 
-  // it('should call their eventHandler openLink() when clicking on the menu item', () => {
-  //   expect(true).toBeTruthy();
-  //   const buttonElt = fixture.nativeElement.querySelector('.toolbar-button');
-  //   buttonElt.click();
-  //   const bottomPanalElt = fixture.debugElement.query(By.css('.bottom-panal'));
-  //   spyOn(bottomPanalElt, 'openLink');
-  //   const matListItem = bottomPanalElt.nativeElement.querySelector('mat-list-item');
-  //   matListItem.click();
-  //   expect(bottomPanalElt.openLink).toHaveBeenCalled();
-  // });
+    let bottomSheetRef = app.showBottomSheet();
+    fixture.detectChanges();
+    bottomSheetRef.afterOpened().toPromise();
+    let menuItem = document.getElementById('bottom-panel-item-1'); 
+    // spyOn(menuItem, 'openLink').withArgs({1:1});
+    menuItem.click();
+    // expect(menuItem.openLink).toHaveBeenCalled();
+    console.log(menuItem)
+    expect(true).toBeTruthy();
+  });
 
   it('should cancel the bottom sheet when clicking on the overlay', () => {
     fixture.detectChanges();
-    app.showBottomSheet();
-    let bottomPanalElt = document.getElementById('bottom-panal');
-    expect(bottomPanalElt).toBeTruthy();
+    let bottomSheetRef = app.showBottomSheet();
+    bottomSheetRef.afterOpened().subscribe(() => {
+      expect(bottomSheetRef).toBeTruthy();
+    });
 
-    // BottomSheet overlay responds to click event.
     const overlayClass = 'cdk-overlay-backdrop';
     const overlay = document.getElementsByClassName(overlayClass)[0] as HTMLElement;
+    bottomSheetRef.afterDismissed().subscribe(() => {
+      expect(bottomSheetRef).toBeFalsy();
+    });
     overlay.click();
-    fixture.detectChanges();
-
-    // Bottom sheet needs time to be removed from screen.
-    setTimeout(() => {
-        bottomPanalElt = document.getElementById('bottom-panal');
-        expect(bottomPanalElt).toBeFalsy();
-    }, 1000);
-  });
-
-  it('should render menu items in the bottom sheet', () => {
-      fixture.detectChanges();
-      expect(document.getElementById('bottom-panel-item-1')).toBeFalsy();
-      app.showBottomSheet();
-      fixture.detectChanges();
-      expect(document.getElementById('bottom-panel-item-1')).toBeTruthy();
+    flush();
   });
 });

@@ -1,4 +1,7 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { 
+  Component, 
+  ViewEncapsulation
+} from '@angular/core';
 import { MatBottomSheet, MatBottomSheetRef } from '@angular/material';
 
 @Component({

@@ -4,7 +4,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { DataService } from './data.service';
 import * as Colors from '@pxblue/colors';
-import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import { MatBottomSheet, MatBottomSheetRef } from '@angular/material/bottom-sheet';
 import { BottomsheetComponent } from './bottomsheet/bottomsheet.component';
 
 @Component({
@@ -37,7 +37,7 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
-  showBottomSheet(): void {
-    this.bottomSheet.open(BottomsheetComponent, {restoreFocus: false, panelClass: 'bottomPanel'});
+  showBottomSheet(): MatBottomSheetRef {
+    return this.bottomSheet.open(BottomsheetComponent, {restoreFocus: false, panelClass: 'bottomPanel'});
   }
 }
