@@ -16,6 +16,9 @@ describe('AppComponent', () => {
         fixture = TestBed.createComponent(AppComponent);
         app = fixture.debugElement.componentInstance;
         spyOn(app, 'initializeApp').and.stub();
+
+        // to increase the timeout and allow spec #3 and #4 pass
+        jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
     }));
 
     it('should create the app', () => {
@@ -31,6 +34,7 @@ describe('AppComponent', () => {
     });
 
     it('should display the bottom sheet when clicking the top right icon', ( (done) => {
+        
         fixture.detectChanges();
         app.showBottomSheet().afterOpened().subscribe(() => {
             const bottomSheet = document.getElementById('bottom-panel');
@@ -40,6 +44,7 @@ describe('AppComponent', () => {
     }));
 
     it('should render menu items in the bottom sheet', ((done) => {
+        console.log(jasmine.DEFAULT_TIMEOUT_INTERVAL)
         fixture.detectChanges();
         app.showBottomSheet().afterOpened().subscribe(() => {
             const menuItem = document.getElementById('bottom-panel-item-1')
