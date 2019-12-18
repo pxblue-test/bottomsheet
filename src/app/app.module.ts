@@ -55,9 +55,8 @@ export class MaterialModule {}
   providers: [
     StatusBar,
     SplashScreen,
-    // MatBottomSheet,
     Overlay
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
