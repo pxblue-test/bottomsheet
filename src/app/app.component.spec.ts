@@ -33,7 +33,7 @@ describe('AppComponent', () => {
     it('should display the bottom sheet when clicking the top right icon', ( (done) => {
         fixture.detectChanges();
         app.showBottomSheet().afterOpened().subscribe(() => {
-            const bottomSheet = document.getElementById('bottom-panal');
+            const bottomSheet = document.getElementById('bottom-panel');
             expect(bottomSheet).toBeTruthy();
             done();
         });
@@ -52,7 +52,7 @@ describe('AppComponent', () => {
         fixture.detectChanges();
         const bottomSheetRef = app.showBottomSheet();
         bottomSheetRef.afterDismissed().subscribe(() => {
-            const bottomSheet = document.getElementById('bottom-panal');
+            const bottomSheet = document.getElementById('bottom-panel');
             expect(bottomSheet).toBeFalsy();
             done();
         });
@@ -63,7 +63,7 @@ describe('AppComponent', () => {
         fixture.detectChanges();
         const bottomSheetRef = app.showBottomSheet();
         bottomSheetRef.afterDismissed().subscribe(() => {
-            const bottomSheet = document.getElementById('bottom-panal');
+            const bottomSheet = document.getElementById('bottom-panel');
             expect(bottomSheet).toBeFalsy();
             done();
         });

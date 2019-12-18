@@ -1,13 +1,19 @@
-#bottom-panal{
+#bottom-panel{
     min-width: 600px;
     padding: 0;
     .mat-nav-list{
         padding: 0;
     }
 }
+
+.mat-bottom-sheet-container {
+    padding: 0;
+}
+
 @media (max-width: 600px) {
     #bottomPanel{
         min-width: 100vw;
+        padding: 0;
 
         .mat-nav-list mat-list-item .mat-line{
             text-overflow: inherit;
