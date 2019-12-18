@@ -34,7 +34,6 @@ describe('AppComponent', () => {
     });
 
     it('should display the bottom sheet when clicking the top right icon', ( (done) => {
-        
         fixture.detectChanges();
         app.showBottomSheet().afterOpened().subscribe(() => {
             const bottomSheet = document.getElementById('bottom-panel');
@@ -44,7 +43,6 @@ describe('AppComponent', () => {
     }));
 
     it('should render menu items in the bottom sheet', ((done) => {
-        console.log(jasmine.DEFAULT_TIMEOUT_INTERVAL)
         fixture.detectChanges();
         app.showBottomSheet().afterOpened().subscribe(() => {
             const menuItem = document.getElementById('bottom-panel-item-1')
