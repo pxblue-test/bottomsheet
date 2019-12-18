@@ -2,7 +2,7 @@ import {
   Component, 
   ViewEncapsulation
 } from '@angular/core';
-import { MatBottomSheet, MatBottomSheetRef } from '@angular/material';
+import { MatBottomSheetRef } from '@angular/material';
 
 @Component({
   selector: 'bottom-sheet',

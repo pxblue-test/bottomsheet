@@ -18,7 +18,7 @@ describe('AppComponent', () => {
         spyOn(app, 'initializeApp').and.stub();
 
         // to increase the timeout and allow spec #3 and #4 pass
-        jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
+        jasmine.DEFAULT_TIMEOUT_INTERVAL = 20000;
     }));
 
     it('should create the app', () => {
