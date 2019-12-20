@@ -36,7 +36,7 @@ describe('AppComponent', () => {
     it('should display the bottom sheet when clicking the top right icon', ( (done) => {
         fixture.detectChanges();
         app.showBottomSheet().afterOpened().subscribe(() => {
-            const bottomSheet = document.getElementById('bottom-panel');
+            const bottomSheet = document.getElementsByClassName('bottomPanel')[0];
             expect(bottomSheet).toBeTruthy();
             done();
         });
@@ -45,7 +45,7 @@ describe('AppComponent', () => {
     it('should render menu items in the bottom sheet', ((done) => {
         fixture.detectChanges();
         app.showBottomSheet().afterOpened().subscribe(() => {
-            const menuItem = document.getElementById('bottom-panel-item-1')
+            const menuItem = document.getElementById('bottom-panel-item-1');
             expect(menuItem).toBeTruthy();
             done();
         });
@@ -55,7 +55,7 @@ describe('AppComponent', () => {
         fixture.detectChanges();
         const bottomSheetRef = app.showBottomSheet();
         bottomSheetRef.afterDismissed().subscribe(() => {
-            const bottomSheet = document.getElementById('bottom-panel');
+            const bottomSheet = document.getElementsByClassName('bottomPanel')[0];
             expect(bottomSheet).toBeFalsy();
             done();
         });
@@ -66,7 +66,7 @@ describe('AppComponent', () => {
         fixture.detectChanges();
         const bottomSheetRef = app.showBottomSheet();
         bottomSheetRef.afterDismissed().subscribe(() => {
-            const bottomSheet = document.getElementById('bottom-panel');
+            const bottomSheet = document.getElementsByClassName('bottomPanel')[0];
             expect(bottomSheet).toBeFalsy();
             done();
         });

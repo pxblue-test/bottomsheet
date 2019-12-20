@@ -17,11 +17,11 @@
   <ion-content>
       <mat-nav-list *ngIf="data.length > 0">
           <mat-list-item *ngFor="let i of data; let index = index;" [class.active]="i.active">
-            <mat-icon class="padded-list-icon" mat-list-icon *ngIf="!i.active">notifications</mat-icon>
-            <mat-icon class="padded-list-icon" mat-list-icon *ngIf="i.active">notifications_active</mat-icon>
-            <h4 mat-line style="font-weight: 600; font-size:15px; margin-bottom: 5px;">
+            <mat-icon class="padded" mat-list-icon *ngIf="!i.active">notifications</mat-icon>
+            <mat-icon class="padded" mat-list-icon *ngIf="i.active">notifications_active</mat-icon>
+            <p mat-line class="list-item-title">
               <ng-container *ngIf="i.active">ACTIVE: </ng-container> {{ i.details }}
-            </h4>
+            </p> 
             <p mat-line>
               {{ i.date | date: 'MM/dd/yyyy' }}
             </p>
