@@ -19,14 +19,14 @@ export class DataService {
       location: this.LOCATIONS[Math.floor(Math.random() * this.LOCATIONS.length)],
       device: this.DEVICES[Math.floor(Math.random() * this.DEVICES.length)],
       details: this.DETAILS[Math.floor(Math.random() * this.DETAILS.length)]
-    }
+    };
   }
 
   constructor() {
     for (let i = 1; i <= 10; i++) {
       this.data.push(this.getRandomData());
     }
-    this.data.sort((a,b) => b.date-a.date);
+    this.data.sort((a, b) => b.date - a.date);
   }
 
 }

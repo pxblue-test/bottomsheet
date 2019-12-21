@@ -12,7 +12,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { ScrollDispatchModule } from '@angular/cdk/scrolling';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
@@ -46,7 +46,7 @@ export class MaterialModule {}
     MatIconModule,
     FlexLayoutModule,
     MatListModule,
-    ScrollDispatchModule,
+    ScrollingModule,
     MatBottomSheetModule,
     BrowserAnimationsModule,
     FormsModule

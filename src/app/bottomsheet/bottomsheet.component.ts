@@ -1,5 +1,5 @@
-import { 
-  Component, 
+import {
+  Component,
   ViewEncapsulation
 } from '@angular/core';
 import { MatBottomSheetRef } from '@angular/material';

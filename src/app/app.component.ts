@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
@@ -12,10 +12,10 @@ import { BottomsheetComponent } from './bottomsheet/bottomsheet.component';
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   data = [];
-  Colors: Object = Colors;
+  Colors = Colors;
 
   constructor(
     private bottomSheet: MatBottomSheet,
