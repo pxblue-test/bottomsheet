@@ -13,6 +13,11 @@
   padding: 8px;
 }
 
+.mat-list-base .mat-list-item .mat-line.list-item-title {
+  font-weight: 600; 
+  margin-bottom: 5px;
+}
+
 .title-wrapper {
   flex: 1;
   z-index: 10;
