@@ -18,13 +18,13 @@ mat-list-item {
   box-sizing: border-box;
   cursor: pointer;
   &.active{
-    border-left-color: map-get($pxb-red, A700);
+    border-left-color: map-get($pxb-red, 500);
     .list-item-title {
-      color: map-get($pxb-red, A700);
+      color: map-get($pxb-red, 500);
     }
     mat-icon{
       color: #ffffff;
-      background: map-get($pxb-red, A700);
+      background: map-get($pxb-red, 500);
     }
   }
 }
