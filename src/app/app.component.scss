@@ -39,7 +39,7 @@ mat-list-item {
   cursor: pointer;
   &.active{
     border-left-color: map-get($pxb-red, 500);
-    h4{
+    .list-item-title{
       color: map-get($pxb-red, 500);
     }
     mat-icon{
