@@ -12,15 +12,21 @@
     "prettier": "prettier \"**/**.{ts,tsx,js,jsx,json,css,scss,html}\" --write"
   },
   "dependencies": {
-    "expo": "~36.0.0",
-    "react": "~16.9.0",
-    "react-dom": "~16.9.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
-    "react-native-screens": "2.0.0-alpha.12",
-    "react-native-web": "~0.11.7",
-    "@pxblue/colors": "^1.0.13",
-    "@pxblue/react-native-components": "latest",
-    "react-native-vector-icons": "latest"
+    "@pxblue/colors": "^2.0.0",
+    "@pxblue/react-native-components": "^2.0.2",
+    "@pxblue/themes": "^2.2.4",
+    "@types/jest": "^24.0.23",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "expo": "^35.0.0",
+    "react": "16.8.3",
+    "react-dom": "16.8.3",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
+    "react-native-elements": "^1.2.7",
+    "react-native-gesture-handler": "1.4.1",
+    "react-native-vector-icons": "^6.6.0",
+    "react-native-web": "^0.11.7",
+    "react-test-renderer": "16.8.6"
   },
   "devDependencies": {
     "@types/react": "~16.9.0",
