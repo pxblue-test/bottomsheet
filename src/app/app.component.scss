@@ -14,17 +14,17 @@
 }
 
 mat-list-item {
-  border-left: 4px solid transparent;
+  border-left: 6px solid transparent;
   box-sizing: border-box;
   cursor: pointer;
   &.active{
-    border-left-color: map-get($pxb-red, A700);
+    border-left-color: map-get($pxb-red, 500);
     .list-item-title {
-      color: map-get($pxb-red, A700);
+      color: map-get($pxb-red, 500);
     }
     mat-icon{
       color: #ffffff;
-      background: map-get($pxb-red, A700);
+      background: map-get($pxb-red, 500);
     }
   }
 }
